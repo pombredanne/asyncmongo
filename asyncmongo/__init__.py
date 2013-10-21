@@ -24,8 +24,8 @@ except ImportError:
     raise ImportError("bson library not installed. Install pymongo >= 1.9 https://github.com/mongodb/mongo-python-driver")
 
 # also update in setup.py
-version = "1.2.2"
-version_info = (1, 2, 2)
+version = "1.3-alpha3"
+version_info = (1, 3, 'alpha3')
 
 ASCENDING = 1
 """Ascending sort order."""
@@ -34,6 +34,7 @@ DESCENDING = -1
 GEO2D = "2d"
 """Index specifier for a 2-dimensional `geospatial index`"""
 
-from errors import Error, InterfaceError, DatabaseError, DataError, IntegrityError, ProgrammingError, NotSupportedError
+from errors import (Error, InterfaceError, AuthenticationError, DatabaseError, RSConnectionError,
+                    DataError, IntegrityError, ProgrammingError, NotSupportedError)
 
 from client import Client
